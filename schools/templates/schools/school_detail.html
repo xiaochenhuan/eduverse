@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">{{ school.name }}</h3>
+    <p class="card-text">
+      <strong>City:</strong> {{ school.city }}<br>
+      <strong>State:</strong> {{ school.state }}<br>
+      <strong>Zip:</strong> {{ school.zip }}<br>
+      <strong>District:</strong> <a href="{% url 'district_detail' school.district.pk %}">{{ school.district.name }}</a><br>
+      <strong>Enrollment:</strong> {{ school.enrollment }}
+    </p>
+    <a href="{% url 'school_list' %}" class="btn btn-secondary">Back to List</a>
+  </div>
+</div>
+{% endblock %}

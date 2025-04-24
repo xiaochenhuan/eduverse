@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Title + Back Button -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2 class="mb-0">All Schools</h2>
+  <a href="{% url 'home' %}" class="btn btn-outline-secondary">← Back to Homepage</a>
+</div>
+
+<!-- State Filter Form -->
+<form method="get" class="row justify-content-center mb-4">
+  <div class="col-md-4">
+    <select name="state" class="form-select">
+      <option value="All">All States</option>
+      {% for s in states %}
+        <option value="{{ s }}" {% if s == selected_state %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-2">
+    <button type="submit" class="btn btn-primary w-100">Filter</button>
+  </div>
+</form>
+
+<!-- Optional: Clear Filter Button -->
+{% if selected_state and selected_state != "All" %}
+<div class="text-center mb-3">
+  <a href="{% url 'school_list' %}" class="btn btn-secondary btn-sm">Clear Filter</a>
+</div>
+{% endif %}
+
+<!-- School List -->
+<ul class="list-group">
+  {% for school in schools %}
+    <li class="list-group-item">
+      <a href="{% url 'school_detail' school.pk %}">{{ school.name }}</a>
+      — {{ school.city }}, {{ school.state }}
+    </li>
+  {% empty %}
+    <li class="list-group-item text-danger">No schools found for selected state.</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

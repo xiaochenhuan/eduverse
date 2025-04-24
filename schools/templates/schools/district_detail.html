@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ district.name }} ({{ district.state }})</h2>
+<h4 class="mb-3">Schools in this district:</h4>
+<ul class="list-group">
+  {% for school in schools %}
+    <li class="list-group-item">{{ school.name }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'school_list' %}" class="btn btn-secondary mt-3">Back to School List</a>
+{% endblock %}
