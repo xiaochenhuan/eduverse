@@ -10,13 +10,14 @@ SECRET_KEY = 'your-very-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fragilecubic-hellobagel-8000.codio-box.uk']  # For Codio or localhost. Change for production.
+ALLOWED_HOSTS = ['fragilecubic-hellobagel-8000.codio-box.uk','monitortoast-shelftaboo-8000.codio-box.uk']  # For Codio or localhost. Change for production.
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.render.com',
     'https://*.codio.io',
     'https://*.github.io',
     'https://fragilecubic-hellobagel-8000.codio-box.uk',
+    'https://monitortoast-shelftaboo-8000.codio-box.uk',
 ]
 
 # Application definition
