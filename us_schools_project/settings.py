@@ -13,7 +13,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'fragilecubic-hellobagel-8000.codio-box.uk',
     'monitortoast-shelftaboo-8000.codio-box.uk',
-    'eduverse-diqd.onrender.com',
+    'eduverse-group-project.onrender.com',
     'localhost',
 ]
 
