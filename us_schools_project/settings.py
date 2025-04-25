@@ -23,7 +23,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.github.io',
     'https://fragilecubic-hellobagel-8000.codio-box.uk',
     'https://monitortoast-shelftaboo-8000.codio-box.uk',
-    'https://eduverse-diqd.onrender.com',
+    'https://eduverse-group-project.onrender.com',
 ]
 
 # Application definition
