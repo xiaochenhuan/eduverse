@@ -10,13 +10,13 @@ SECRET_KEY = 'your-very-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://roundsister-empiretarzan-8000.codio-box.uk']  # For Codio or localhost. Change for production.
+ALLOWED_HOSTS = ['https://parentoxford-appeargeneral-8000.codio-box.uk']  # For Codio or localhost. Change for production.
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.render.com',
     'https://*.codio.io',
     'https://*.github.io',
-    'https://roundsister-empiretarzan-8000.codio-box.uk',
+    'https://parentoxford-appeargeneral-8000.codio-box.uk',
 ]
 
 # Application definition
